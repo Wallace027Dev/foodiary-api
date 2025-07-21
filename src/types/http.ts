@@ -3,6 +3,7 @@ export type HttpRequest = {
   queryParams: Record<string, any>;
   params: Record<string, any>;
 };
+
 export type HttpResponse = {
   statusCode: number;
   body?: Record<string, any>;
