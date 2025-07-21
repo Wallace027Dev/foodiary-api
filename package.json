@@ -1,0 +1,25 @@
+{
+  "name": "foodiary-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wallace027Dev/foodiary-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wallace027Dev/foodiary-api/issues"
+  },
+  "homepage": "https://github.com/Wallace027Dev/foodiary-api#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.152",
+    "@types/node": "^24.0.15",
+    "typescript": "^5.8.3"
+  }
+}
