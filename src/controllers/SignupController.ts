@@ -4,6 +4,7 @@ import { HttpRequest, HttpResponse } from "../types/http";
 import { badRequest, conflict, created } from "../utils/http";
 import { z } from "zod";
 import { usersTable } from "../db/schema";
+const { hash } = require("bcryptjs");
 
 const schema = z.object({
   goal: z.enum(["lose", "maintain", "gain"]),
@@ -40,11 +41,14 @@ export class SignUpController {
 
     const { account, ...rest } = data;
 
+    const hashedPassword = await hash(account.password, 8);
+
     const [user] = await db
       .insert(usersTable)
       .values({
         ...rest,
         ...account,
+        password: hashedPassword,
         calories: 0,
         proteins: 0,
         carbohydrates: 0,
